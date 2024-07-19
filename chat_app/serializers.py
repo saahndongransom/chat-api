@@ -1,6 +1,5 @@
 from rest_framework import serializers
-from .models import Chat, Group  # Import both Chat and Group models
-
+from .models import Chat, Group 
 class ChatSerializer(serializers.ModelSerializer):
     class Meta:
         model = Chat

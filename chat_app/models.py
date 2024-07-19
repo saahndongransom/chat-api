@@ -14,7 +14,7 @@ class Chat(models.Model):
     group = models.ForeignKey(Group, on_delete=models.CASCADE, null=True, blank=True)
     message = models.CharField(max_length=255, blank=True)
     reply_message = models.TextField(blank=True, null=True)
-    # Add any other fields like timestamp, etc.
+   
 
     def __str__(self):
         return f"Chat {self.id}"

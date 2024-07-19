@@ -17,9 +17,9 @@ class ChatDetailView(generics.RetrieveUpdateDestroyAPIView):
         if serializer.is_valid():
             message = request.data.get('message')
             if message:
-                instance.message = message  # Update the message field
-                instance.save()  # Save the instance with the updated message
-                print(f"Received message: {message}")  # Print the message in the terminal
+                instance.message = message  
+                instance.save()  
+                print(f"Received message: {message}")  
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=400)
